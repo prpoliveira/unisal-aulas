@@ -69,4 +69,11 @@ public abstract class GenericDAO {
 		else
 			return conn;		
 	}
+	
+	public Connection getConnectionPool() throws ClassNotFoundException, SQLException, IOException {		
+		if(conn == null || conn.isClosed())
+			return conn = ConnectionPool.getInstance().createConnectionComPool();
+		else
+			return conn;		
+	}
 }

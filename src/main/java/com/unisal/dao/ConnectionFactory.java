@@ -27,7 +27,7 @@ public class ConnectionFactory {
 		if(INSTANCE == null) {
 			final Properties props = PropertyUtil.getInstance().readFromClasspath("fretao.properties");
 			if(props == null) {
-				throw new FileNotFoundException(String.format("Dont possible find the db-config file: '%s'.", "ws-db-config.properties"));
+				throw new FileNotFoundException(String.format("Dont possible find the db-config file: '%s'.", "fretao.properties"));
 			}
 			INSTANCE = new ConnectionFactory(props); 
 		}
