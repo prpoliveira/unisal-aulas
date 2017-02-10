@@ -14,8 +14,8 @@ public class CalculaFrete implements Instancia {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-		double geocodigoA = new Double(request.getParameter("geocodigoA"));
-		double geocodigoB = new Double(request.getParameter("geocodigoB"));
+		//double geocodigoA = new Double(request.getParameter("geocodigoA"));
+		//double geocodigoB = new Double(request.getParameter("geocodigoB"));
 		
 		// TODO Realizar aqui todo o processo de consulta ao BD e após 
 		// retornar para a página que será exibido os valores;

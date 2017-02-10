@@ -14,7 +14,7 @@ public class Logout implements Instancia {
 		session.removeAttribute("usuario.hashcode");
 		session.invalidate();
 		
-		return Constantes.raizPages + "logout.jsp";
+		return Constantes.raiz + "index.jsp";
 	}
 
 }

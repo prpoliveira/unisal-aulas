@@ -17,7 +17,7 @@ public class ControladorGeral extends HttpServlet{
 	private static final long serialVersionUID = -3214432047220516430L;
 	
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		/**
 		 * Recupera qual instancia deve ser criada via Reflection
 		 */

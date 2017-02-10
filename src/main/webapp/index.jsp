@@ -110,7 +110,9 @@
     <body>
         <div class="login-page">
             <div class="form">
-                <p>UNISAL - Desenvolvimento de Sistemas Web e Mobile</p>
+                <form action="controlador-geral?execute=Login" method="post">
+				    <input type="submit" value="Login" />
+				</form>
             </div>
         </div>
     </body>

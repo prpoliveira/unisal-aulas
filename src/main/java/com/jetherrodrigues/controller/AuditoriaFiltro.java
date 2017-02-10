@@ -9,22 +9,25 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
-@WebFilter(urlPatterns = "")
+@WebFilter(urlPatterns = "/*")
 public class AuditoriaFiltro implements Filter{
 
 	public void destroy() {		
-		// TODO Pode ser implementado alguma ação quando se destroi a instancia;
+		// TODO Pode ser implementado alguma aï¿½ï¿½o quando se destroi a instancia;
 	}
 
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filter)
-			throws IOException, ServletException {
-		// TODO Auto-generated method stub
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filter) throws IOException, ServletException {
+		HttpServletRequest req = (HttpServletRequest) request;
+		System.out.println("Imprimindo a URI: " + req.getRequestURI());
+		System.out.println("Imprimindo a URL: " + req.getRequestURL() + "/" + req.getQueryString());
 		
+		filter.doFilter(request, response);
 	}
 
 	public void init(FilterConfig config) throws ServletException {
-		// TODO Pode ser implementado alguma ação quando se inicia a instancia;		
+		// TODO Pode ser implementado alguma aï¿½ï¿½o quando se inicia a instancia;		
 	}
 
 }
